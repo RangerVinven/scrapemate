@@ -453,7 +453,8 @@ func (s *ScrapeMate) doFetch(ctx context.Context, job IJob) (ans Response) {
 }
 
 func (s *ScrapeMate) getMaxRetries(job IJob) int {
-	const maxRetriesDefault = 5
+	// const maxRetriesDefault = 5
+	const maxRetriesDefault = 0
 
 	maxRetries := job.GetMaxRetries()
 	if maxRetries > maxRetriesDefault {
